@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Satori </title>
+	<!------- FONTS ------->
+	<link rel="stylesheet" href="assets/fonts/fonts.css">
+	<!----- CSS HERE ----->
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/reuseble-code.css" />
+	<link rel="stylesheet" href="assets/css/header.css" />
+	<link rel="stylesheet" href="assets/css/footer.css" />
+	<link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<style>
+	.dashboard .active {
+		background: #B6A75B;
+		color: white;
+		font-weight: 700 !important;
+	}
+	.dashboard ul li a{
+		transition:0.5s ease-in-out ;
+		color: rgba(46, 44, 44, 0.541);
+		font-weight: 500 !important;
+	}
+	.dashboard ul li a:hover {
+		background: #B6A75B;
+		color: white !important;
+		font-weight: 700 !important;	
+	}
+	.vh-25{
+		height: 25vh !important;
+	}
+	.rounded-md{
+		border-radius: 10px;
+	}
+	.dashboard .fs-1{
+		font-size: 40px !important;
+	}
+	.gap-4{
+		gap:16px !important
+	}
+	.bg-yellow-500{
+		background-color: #B6A75B !important;
+	}
+	.bg-blue-200{
+		background: #E0EBED !important;
+	}
+	.z-99{
+		z-index: 9999999999999;
+	}
+	.fw-500{
+		font-weight: 500 !important;
+	}
+	.modal-backdrop {
+    height: auto !important;
+    background-color: transparent !important;
+	}
+	.offcanvas-start {
+    width: 250px !important;
+	}
+	
+</style>
+
+<body>
+	<!------------------------->
+	<!---- Start Main Area ---->
+	<main>
+		<!-- 
+		=====================================================
+		Start Header Section 
+		=====================================================
+		-->
+		<div class="shadow-3 ">
+			<div class="container-md">
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="logo">
+						<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+					</div>
+					<div class="header-text tc d-none d-md-block">
+						<h3 class="ps-700 cb6 uppercase s20">SATORI MEDITATIONS | DHAKA</h3>
+					</div>
+					<div class=" d-flex align-items-center">
+						<span class=" cb6">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+								<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+								<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+							  </svg>
+						</span>
+						<div class="dropdown">
+							<a href="#" class="dropdown-toggle p-2 rounded-pill fw-bold cb6 px-4 fs-4 font-bold" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+							  Saymon Arefin
+							</a>
+							<ul class="dropdown-menu p-4 shadow border-0 rounded-md">
+							  <li><a class="dropdown-item fs-4 fw-500 c4a pe-5" href="#">My Account</a></li>
+							  <li><a class="dropdown-item fs-4 fw-500 c4a pe-5" href="#">Login</a></li>
+							  <li><a class="dropdown-item fs-4 fw-500 c4a pe-5" href="#">Logout</a></li>
+							</ul>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 
+		=====================================================
+		End Header Section 
+		=====================================================
+		-->
+		<!-- 
+		  =====================================================
+		  Dashboard
+		  =====================================================
+		-->
+		<section class=" dashboard">
+			<div class="">
+				<div class="row">
+					
+					<!------------------->
+					<div class="col-xl-2 col-md-3 col-1 sticky mh-100 vh-md-100 overflow-md-auto shadow py-5 px-0 ">
+						<!------Offcanvas Dashboard for mobile and tab--------->
+						<div class=" d-block d-md-none">
+							<button class=" ps-3 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions">
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+									<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+								  </svg>
+							</button>
+							<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions">
+								<div class="offcanvas-header">
+									<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+								</div>
+								<nav id="left-nav">
+									<ul class=" text-center p-0">
+										<li>
+											<a class="active fs-4 text-white w-100 py-3 mb-1" href="dashboard.html">Dashboard</a>
+										</li>
+										<li>
+											<a class=" fs-4 c41 w-100 py-3 mb-1" href="course.html">Course</a>
+										</li>
+										<li>
+											<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Sessions</a>
+										</li>
+										<li>
+											<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Events</a>
+										</li>
+										<li>
+											<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Setting</a>
+										</li>
+										<li>
+											<a class=" fs-4 c41 w-100 py-3 mb-1" href="change-pass.html">Change password</a>
+										</li>
+										<li>
+											<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Log out</a>
+										</li>
+									</ul>
+								</nav>
+								
+							</div>
+						</div>
+						<!------main nav--------->
+						<nav id="left-nav">
+							<ul class=" text-center p-0">
+								<li>
+									<a class="active fs-4 text-white w-100 py-3 mb-1" href="dashboard.html">Dashboard</a>
+								</li>
+								<li>
+									<a class=" fs-4 c41 w-100 py-3 mb-1" href="course.html">Course</a>
+								</li>
+								<li>
+									<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Sessions</a>
+								</li>
+								<li>
+									<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Events</a>
+								</li>
+								<li>
+									<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Setting</a>
+								</li>
+								<li>
+									<a class=" fs-4 c41 w-100 py-3 mb-1" href="change-pass.html">Change password</a>
+								</li>
+								<li>
+									<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Log out</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!------------------->
+					<div class="col-xl-10 col-md-9 col-11 py-5 mt-md-5">
+						<div class=" container md:p-5 py-0 ">
+							<div class=" row g-3">
+								<!--------001-------->
+								<a href="#" class="text-center col-lg-4 col-sm-6 d-flex align-items-center justify-content-center   text-white">
+									<div class="p-5 overlay w-100 shadow-lg rounded-md" style=" background-image:
+									linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+									url('assets/images/ed.png'); background-size: cover; background-repeat: no-repeat">
+										<span >
+											<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+												<path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+												<path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+												<path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+											  </svg>
+										</span>
+										<h3 class="mt-4 fs-2">Active course</h3>
+										<p  class="fs-1 fw-bold">2</p>
+									</div>
+								</a>
+								<!--------002-------->
+								<a href="#" class="text-center col-lg-4 col-sm-6 d-flex align-items-center justify-content-center   text-white">
+									<div class="p-5 w-100 shadow-lg rounded-md" style=" background-image:
+									linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+									url('assets/images/living.png'); background-size: cover; background-repeat: no-repeat">
+										<span >
+											<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+												<path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+												<path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+												<path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+											  </svg>
+										</span>
+										<h3 class="mt-4 fs-2">Live course</h3>
+										<p  class="fs-1 fw-bold">2</p>
+									</div>
+								</a>
+								<!--------003-------->
+								<a href="#" class="text-center col-lg-4 col-sm-6 d-flex align-items-center justify-content-center   text-white">
+									<div class="p-5 w-100 shadow-lg rounded-md" style=" background-image:
+									linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+									url('assets/images/sd.png'); background-size: cover; background-repeat: no-repeat">
+										<span >
+											<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+												<path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+												<path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+												<path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+											  </svg>
+										</span>
+										<h3 class="mt-4 fs-2">Running Courses</h3>
+										<p  class="fs-1 fw-bold">2</p>
+									</div>
+								</a>
+								<!--------004-------->
+								<a href="#" class="text-center col-lg-4 col-sm-6 d-flex align-items-center justify-content-center   text-white">
+									<div class="p-5 w-100 shadow-lg rounded-md" style=" background-image:
+									linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+									url('assets/images/s4.png'); background-size: cover; background-repeat: no-repeat">
+										<span >
+											<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+												<path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+												<path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+												<path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+											  </svg>
+										</span>
+										<h3 class="mt-4 fs-2">Complated Courses</h3>
+										<p  class="fs-1 fw-bold">5</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 
+		  =====================================================
+		  End Dashboard
+		  =====================================================
+		-->
+		
+
+	</main>
+	<!----- End Main Area ----->
+	<!------------------------->
+
+	<!-- 
+	=====================================================
+	Start Footer Section 
+	=====================================================
+	-->
+	<div class=" bg-blue-200 shadow-sm">
+		<div class="f-bottom-t">
+			<div class="container">
+				<p class="tc ps-400 s14">&copy; SATORY 2021 Copyright All Right Reserved by AAVA 3D</p>
+			</div>
+		</div>
+	</div>
+	<!-- 
+	=====================================================
+	End Footer Section 
+	=====================================================
+	-->
+
+	
+	<!------------ JS HERE ------------>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/swiper-bundle.min.js"></script>
+	<script src="assets/js/mixitup.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script>
+		
+	
+
+	
+
+	
+
+	</script>
+</body>
+
+</html>
