@@ -24,6 +24,7 @@
 		color: white;
 		font-weight: 700 !important;
 	}
+	.breadcrumb  li,
 	.dashboard ul li a{
 		transition:0.5s ease-in-out ;
 		color: rgba(46, 44, 44, 0.541);
@@ -68,6 +69,10 @@
 	.border-secondary {
     border-color: #6c757d3d!important;
 	}
+	
+	.breadcrumb .active{
+		color:#B6A75B !important;
+	}
 </style>
 
 <body>
@@ -106,6 +111,41 @@
 							</ul>
 						  </div>
 					</div>
+					<!------Offcanvas Dashboard for mobile and tab--------->
+					<div class="dashboard d-block d-md-none ">
+						<button class=" ps-3 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions">
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+							  </svg>
+						</button>
+						<div class="offcanvas border-0 shadow pt-5 offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions">
+							<nav id="left-nav">
+								<ul class=" text-center p-0 pt-2">
+									<li>
+										<a class=" fs-4 c41 w-100 py-3 mb-1" href="dashboard.html">Dashboard</a>
+									</li>
+									<li>
+										<a class=" fs-4 c41 w-100 py-3 mb-1" href="course.html">Course</a>
+									</li>
+									<li>
+										<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Sessions</a>
+									</li>
+									<li>
+										<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Events</a>
+									</li>
+									<li>
+										<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Setting</a>
+									</li>
+									<li>
+										<a class="active fs-4 c41 w-100 py-3 mb-1" href="change-pass.html">Change password</a>
+									</li>
+									<li>
+										<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Log out</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -123,49 +163,10 @@
 			<div class="">
 				<div class="row">
 					<!------------------->
-					<div class="col-xl-2 col-md-3 col-1 sticky mh-100 vh-md-100 overflow-md-auto shadow py-5 px-0 ">
-						<!------Offcanvas Dashboard for mobile and tab--------->
-						<div class=" d-block d-md-none">
-							<button class=" ps-3 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions">
-								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-									<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-								  </svg>
-							</button>
-							<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions">
-								<div class="offcanvas-header">
-									<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-								</div>
-								<nav id="left-nav">
-									<ul class=" text-center p-0">
-										<li>
-											<a class="fs-4 c41 w-100 py-3 mb-1" href="dashboard.html">Dashboard</a>
-										</li>
-										<li>
-											<a class=" fs-4 c41 w-100 py-3 mb-1" href="course.html">Course</a>
-										</li>
-										<li>
-											<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Sessions</a>
-										</li>
-										<li>
-											<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Events</a>
-										</li>
-										<li>
-											<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Setting</a>
-										</li>
-										<li>
-											<a class="active fs-4 c41 w-100 py-3 mb-1" href="change-pass.html">Change password</a>
-										</li>
-										<li>
-											<a class=" fs-4 c41 w-100 py-3 mb-1" href="#">Log out</a>
-										</li>
-									</ul>
-								</nav>
-								
-							</div>
-						</div>
+					<div class="col-xl-2 col-md-3 col-1 sticky mh-100 vh-md-100 overflow-md-auto shadow py-5 px-0 d-md-block d-none">
 						<!------main nav--------->
 						<div id="left-nav">
-							<ul class=" text-center p-0 d-md-block d-none pt-5">
+							<ul class=" text-center p-0  pt-5">
 								<li>
 									<a class="fs-4 c41 w-100 py-3 mb-1" href="dashboard.html">Dashboard</a>
 								</li>
@@ -191,15 +192,18 @@
 						</div>
 					</div>
 					<!------------------->
-					<div class="col-xl-10 col-md-9 col-11 py-5 mt-md-5">
-						<div class=" container md:p-5 py-0">
+					<div class="col-xl-10 col-md-9 ">
+						<!---------Breadcump---------->
+						<nav >
+							<ol class="breadcrumb shadow p-5 m-2 mb-5 rounded-md">
+							  <li class="breadcrumb-item fs-4 bg-transparent ">Home</li>
+							  <li class="breadcrumb-item fs-4 bg-transparent active ">Change password</li>
+							</ol>
+						</nav>
+						  <!------------------->
+						<div class=" container-md md:p-5 py-0">
 							<!-----------001-------------->
-							<div class=" row g-3 shadow rounded-md p-md-5 p-3 mb-5">
-								<div class="col-xl-5 d-flex align-items-center justify-content-center">
-									<h1 class=" fs-2 fw-bold">Change your password <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-										<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-									  </svg></h1>
-								</div>
+							<div class=" row g-3 shadow rounded-md p-md-5 p-3 mb-5 d-flex justify-content-center align-items-center">
 								<div class="col-xl-7 py-5">
 									<!-- == reset Form == -->
 									<form class="row text-center">
@@ -208,7 +212,7 @@
 											<div class=" col-md-3 col-4 p-0">
 												<h6 for="validationServer01" class="form-label whitespace-nowrap text-muted  fs-4">Old Password :</h6>
 											</div>
-											<div class=" col-md-7 col-8">
+											<div class=" col-md-9 col-8">
 												<input type="password" class="form-control rounded-md border border-secondary  fs-4 p-3" value="" placeholder=" Old password">
 											</div>
 										</div>
@@ -217,7 +221,7 @@
 											<div class=" col-md-3 col-4 p-0">
 												<h6 for="validationServer01" class="form-label whitespace-nowrap text-muted  fs-4">New Password :</h6>
 											</div>
-											<div class=" col-md-7 col-8">
+											<div class=" col-md-9 col-8">
 												<input type="password" class="form-control rounded-md border border-secondary  fs-4 p-3" value="" placeholder=" New password">
 											</div>
 										</div>
@@ -226,10 +230,11 @@
 											<div class=" col-md-3 col-4 p-0">
 												<h6 for="validationServer01" class="form-label whitespace-nowrap text-muted  fs-4">Confirm Password :</h6>
 											</div>
-											<div class=" col-md-7 col-8">
+											<div class=" col-md-9 col-8">
 												<input type="password" class="form-control rounded-md border border-secondary  fs-4 p-3" value="" placeholder=" Confirm password">
 											</div>
 										</div>
+										<button type="submit" class="secondary-btn w-100 mx-auto mt-5 ">Save</button>
 									</form>
 								</div>
 							</div>
